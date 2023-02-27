@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    {% for i in blog %}
+        <h1>{{i.id}}. {{i.sarlavha}}</h1>
+    {% endfor %}
+
+    <form method="post"> {% csrf_token %}
+        <label>Sarlavha: </label>
+            <input type="text" name="sarlavha" placeholder="Sarlavha... "> <br>
+        <label>Sana: </label>
+            <input type="date" name="sana"> <br>
+        <label>Mavzu: </label>
+            <input type="text" name="mavzu" placeholder="Mavzu... "><br>
+        <label>Matn: </label>
+            <input type="text" name="matn" placeholder="Matn..."><br>
+        <select name="muallif">
+            {% for i in muallif %}
+                <option value="{{i.id}}">{{i.ism}}</option>
+            {% endfor %}
+        </select> <br>
+        <button type="submit">Qoshish</button>
+    </form>
+</body>
+</html>

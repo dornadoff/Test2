@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<form method="post">  {% csrf_token %}
+        <label>Register</label><br>
+    <label>User: </label>
+        <input type="text" name="username" placeholder="User..."><br>
+    <label>Password: </label>
+        <input type="password" name="password" placeholder="Passwords..."><br>
+        <label>Password: </label>
+        <input type="password" name="password1" placeholder="Passwords..."><br>
+    <label>Ism: </label>
+        <input type="text" name="text" placeholder="Ism..."><br>
+    <label>Yosh: </label>
+        <input type="number" name="yosh" placeholder="Yosh..."><br>
+    <label>Kasb: </label>
+        <input type="text" name="kasb" placeholder="Kasb..."><br>
+
+    <button type="submit">Saqlash</button>
+</form>
+</body>
+</html>
